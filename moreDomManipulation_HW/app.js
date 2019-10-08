@@ -46,12 +46,40 @@ var books = [
         alreadyRead: true
     }
 ];
+
+const favoriteBooks = document.querySelector('div.favoriteBooks');
 const newh1 = document.createElement('h1');
 newh1.innerText = 'My Book List';
-document.querySelector('div.favoriteBooks').appendChild(newh1);
-
+favoriteBooks.appendChild(newh1);
+const unorderedList = document.createElement('ul');
+favoriteBooks.appendChild(unorderedList);
 for (i of books) {
-    const newbook = document.createElement('p');
+    const newbook = document.createElement('li');
+    const bookimg = document.createElement('img');
     newbook.innerText = i.title + ', ' + i.author;
-    document.body.appendChild(newbook)
+    if (i.alreadyRead)
+        newbook.style.color = 'green';
+    else
+        newbook.style.color = 'red'
+    unorderedList.appendChild(newbook)
+    switch (i.title) {
+        case 'The Design of Everyday Things':
+            bookimg.setAttribute('src', 'thedesignofeverydaythings.jpg');
+
+            break;
+        case "The Most Human Human":
+            bookimg.setAttribute('src', 'TheMostHumanHuman.jpg');
+            break;
+        case "In Search of Lost Time":
+            bookimg.setAttribute('src', 'InSearchofLostTime.jpg');
+            break;
+        case "Ulysses":
+            bookimg.setAttribute('src', 'Ulysses.jpg');
+            break;
+        case "The Great Gatsby":
+            bookimg.setAttribute('src', 'TheGreatGatsby.jpg');
+            break;
+    };
+    bookimg.style.width = '300px';
+    unorderedList.appendChild(bookimg);
 }
