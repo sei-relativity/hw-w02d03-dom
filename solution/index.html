@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div style="margin-top: 40px; padding: 10px">
+      <select name="websites" id="websites">
+        <option value="unsplash">unsplash</option>
+        <option value="Picsum">Picsum</option>
+        <option value="unsplash">unsplash</option>
+        <option value="Fill Murray">Fill Murray</option>
+        <option value="Place Cage">Place Cage</option>
+        <option value="Lorem Flickr">Lorem Flickr</option>
+      </select>
+      <label>
+        Width:
+        <input type="number" class="width" />
+      </label>
+      <label>
+        Height:
+        <input type="number" class="height" />
+      </label>
+      <button type="button" id="randomize" onclick="createImg()">
+        Get random image!
+      </button>
+    </div>
+
+    <div class="image"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
