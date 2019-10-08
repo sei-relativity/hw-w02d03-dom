@@ -14,12 +14,15 @@ function one() {
   img.style.margin = "30px";
 }
 
+let img = document.createElement("img");
+
 const createImg = () => {
   const height = document.querySelector(".height").value;
   const width = document.querySelector(".width").value;
   console.log(height, width);
   console.log("im here");
   const selection = document.querySelector("#websites").value;
+
   let newSrc;
 
   switch (selection) {
@@ -41,9 +44,9 @@ const createImg = () => {
     default:
       break;
   }
-
-  let img = document.createElement("img");
-  img.src = newSrc;
+  let random = "?" + Date();
+  console.log(random);
+  img.src = newSrc + random;
   img.style.margin = "40px";
   document.querySelector(".image").appendChild(img);
 };
