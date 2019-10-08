@@ -15,7 +15,7 @@ for (i of listitem) {
     i.style.color = "rebeccapurple";
 }
 const newImg = document.createElement('img');
-newImg.setAttribute('src', 'timon.png');
+newImg.setAttribute('src', 'images/timon.png');
 document.querySelector('div.profilePicture').appendChild(newImg);
 
 ////The Book List
@@ -64,20 +64,20 @@ for (i of books) {
     unorderedList.appendChild(newbook)
     switch (i.title) {
         case 'The Design of Everyday Things':
-            bookimg.setAttribute('src', 'thedesignofeverydaythings.jpg');
+            bookimg.setAttribute('src', 'images/thedesignofeverydaythings.jpg');
 
             break;
         case "The Most Human Human":
-            bookimg.setAttribute('src', 'TheMostHumanHuman.jpg');
+            bookimg.setAttribute('src', 'images/TheMostHumanHuman.jpg');
             break;
         case "In Search of Lost Time":
-            bookimg.setAttribute('src', 'InSearchofLostTime.jpg');
+            bookimg.setAttribute('src', 'images/InSearchofLostTime.jpg');
             break;
         case "Ulysses":
-            bookimg.setAttribute('src', 'Ulysses.jpg');
+            bookimg.setAttribute('src', 'images/Ulysses.jpg');
             break;
         case "The Great Gatsby":
-            bookimg.setAttribute('src', 'TheGreatGatsby.jpg');
+            bookimg.setAttribute('src', 'images/TheGreatGatsby.jpg');
             break;
     };
     bookimg.style.width = '300px';
