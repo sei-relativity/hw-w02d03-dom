@@ -5,10 +5,11 @@
 let width = document.querySelector(".width").value;
 let height = document.querySelector('.height').value;
 
+let newImage = document.createElement('img') ;
 
 const createImage = function () {
-   let url = 'https://source.unsplash.com/random/' + width +'/'+ height;
-   let newImage = document.createElement('img') ;
+   let url = 'https://source.unsplash.com/random/' + width +'/'+ height + '?' + Date();
+
    newImage.setAttribute('src', url);
 
    let newImageLocation = document.querySelector('.image');
