@@ -27,24 +27,34 @@ button.addEventListener('click', function () {
   const height = document.querySelector('.height').value;
   const website = document.querySelector("#choose");
   const websiteURL = website.options[website.selectedIndex];
-  
+  const choose = websiteURL.text;
   if (width === '' && height === '') {
-    if (websiteURL.text === 'unsplash') {
+    
+    switch(choose){
+      
+      case 'unsplash' : randomImage.setAttribute('src', websiteURL.value+'random/?'+Math.ceil((Math.random()*1000)));break;
 
-      randomImage.setAttribute('src', websiteURL.value+'random/?'+Math.ceil((Math.random()*1000)))
-    } else {
-      randomImage.setAttribute('src', websiteURL.value + '200/200')
+      case 'Picsum' :  randomImage.setAttribute('src', websiteURL.value + '200/300?random='+Math.ceil((Math.random()*1000)));break;
+
+      case 'Lorem Flickr': randomImage.setAttribute('src', websiteURL.value + '200/200?lock='+Math.ceil((Math.random()*1000)));break;
     }
+
+  
+      
+
   }
   else {
-    if (websiteURL.text === 'unsplash') {
-      randomImage.setAttribute('src', websiteURL.value + width + 'x' + height)
-    }else{
-      randomImage.setAttribute('src', websiteURL.value + width + '/' + height)
+    switch(choose){
+      
+      case 'unsplash' : randomImage.setAttribute('src', websiteURL.value + width + 'x' + height+'/?'+Math.ceil((Math.random()*1000)));break;
 
+      case 'Picsum' :  randomImage.setAttribute('src', websiteURL.value + width + '/' + height+'?random='+Math.ceil((Math.random()*1000)));break;
+
+      case 'Lorem Flickr': randomImage.setAttribute('src', websiteURL.value + width + '/' + height+'?lock='+Math.ceil((Math.random()*1000)));break;
     }
-  }
 
-})
+
+    }    
+  })
 
 console.log('hi')
