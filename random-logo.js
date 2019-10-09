@@ -14,7 +14,9 @@ imageDiv.appendChild(img);
 console.log(btn);
 
 const randomizeImg = function(){
-    img.setAttribute("src", "https://source.unsplash.com/random/"+ widthValue + "*" + heightValue);
+    img.setAttribute("src", "https://source.unsplash.com/random/"+ widthValue.value + "x" + heightValue.value);
+
+    console.log(img.getAttribute("src"));
 };
 
 btn.addEventListener("click", randomizeImg);
