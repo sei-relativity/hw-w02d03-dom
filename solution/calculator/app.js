@@ -27,3 +27,11 @@ const area = () => {
 document.querySelector("#half-button").addEventListener("click", halfIt);
 document.querySelector("#percent-button").addEventListener("click", fraction);
 document.querySelector("#area-button").addEventListener("click", area);
+
+document.querySelector("#half-input").addEventListener("keypress", halfIt);
+
+document
+  .querySelector("#percent2-input")
+  .addEventListener("keypress", fraction);
+
+document.querySelector("#area-input").addEventListener("keypress", area);
