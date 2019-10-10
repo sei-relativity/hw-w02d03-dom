@@ -1,20 +1,12 @@
-const display_random_image = function(){
-    const images = [{
-        src: "http://i.imgur.com/z6yfE.jpg"
-    },{
+//  Create a new image
 
-    }, {
-        src: "http://i.imgur.com/Q2Q1f.jpg"
-    }, {
-        src: "http://i.imgur.com/IiqX7.jpg"
-    },{
+const randImg = document.querySelector("#randomize");
+const imgDiv = document.querySelector(".image");
 
-    }, {
-        src: "http://i.imgur.com/EZUuy.jpg"
-    }, {
-        src: "http://i.imgur.com/IDFxr.jpg"
-    }
-    ]
-    let randomPic = images[Math.floor(Math.random()*myArray.length)];
-    
+const displayRandomImage = function(event){
+    const newImg = document.createElement('img');
+    newImg.src = "https://source.unsplash.com/1600x900";
+
+    imgDiv.prepend(newImg);
 }
+randImg.addEventListener('click', displayRandomImage);
