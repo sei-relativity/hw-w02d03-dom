@@ -1,3 +1,12 @@
+$(document).ready(function () {
+    const $body = $("body");
+    $body.css("font-family", "Arial, sans-serif");
+    $("#nickname").append("Dragon Slayer");
+    $("#favorite").append("The Great Gatsby");
+    $("#hometown").append("Riyadh");
+    
+    $("li").addClass("listitem");
+});
 const books = [
     {
         title: "The Design of Everyday Things",
